@@ -35,9 +35,13 @@ class ConcreteClass2 extends AbstractClass
 
 $class1 = new ConcreteClass1;
 $class1->printOut();
-echo $class1->prefixValue('FOO_') ."\n";
+echo $class1->prefixValue('FOO_') ."<br>";
 
 $class2 = new ConcreteClass2;
 $class2->printOut();
 echo $class2->prefixValue('FOO_') ."\n";
+
+if ( $class1 instanceof ConcreteClass1 ) {
+    print "\$class1 is type ConcreteClass1\n";
+} else {echo "no";}
 ?>
