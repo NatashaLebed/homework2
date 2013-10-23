@@ -9,20 +9,22 @@ namespace natasha;
 
 class TransformerPerambulator extends AbstractPerambulator implements FoldInterface, ProtectColdInterface, ReversibleHandleInterface
 {
-    public function __construct($brand, $weight, $numWheels)
+    public function __construct($brand, $weight, $numberWheels)
     {
-        $this->setValue($brand, $weight, $numWheels);
+        $this->setBrand($brand);
+        $this->setWeight($weight);
+        $this->setNumberWheels($numberWheels);
     }
+
 
     public function priceTitle()
     {
-        return ("Transformer - $this->brand, $this->weight, $this->numWheels");
+        return ("Transformer - {$this->getBrand()}, {$this->getWeight()}, {$this->getNumberWheels()}");
     }
 
     public function fold()
     {
-        $operations = 5;
-        return "Тип сложения - книжка. Сложилась за $operations действий ";
+       return 'Тип сложения - книжка';
     }
 
     public function protectCold()

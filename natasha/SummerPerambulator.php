@@ -10,20 +10,21 @@ namespace natasha;
 
 class SummerPerambulator extends AbstractPerambulator implements FoldInterface
 {
-    public function __construct($brand, $weight, $numWheels)
+    public function __construct($brand, $weight, $numberWheels)
     {
-        $this->setValue($brand, $weight, $numWheels);
+        $this->setBrand($brand);
+        $this->setWeight($weight);
+        $this->setNumberWheels($numberWheels);
     }
 
     public function priceTitle()
     {
-        return ("SummerPeramb - $this->brand, $this->weight, $this->numWheels");
+        return ("SummerPeramb - {$this->getBrand()}, {$this->getWeight()}, {$this->getNumberWheels()}");
     }
 
     public function fold()
     {
-        $operations = 3;
-        return "Тип сложения - трость. Сложилась за $operations действия ";
+        return 'Тип сложения - трость.';
     }
 
 }
