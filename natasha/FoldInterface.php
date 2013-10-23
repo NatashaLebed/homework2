@@ -1,8 +1,8 @@
 <?php
 
-interface FoldInterface
-{
-    public  function Fold();
-}
+namespace natasha;
 
-?>
+interface foldInterface
+{
+    public function fold();
+}

@@ -1,8 +1,8 @@
 <?php
 
+namespace natasha;
+
 interface ReversibleHandleInterface
 {
-    public function ReversibleHandle();
+    public function reversibleHandle();
 }
-
-?>

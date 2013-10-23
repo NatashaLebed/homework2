@@ -1,7 +1,9 @@
 <?php
 
-interface ProtectColdInterface
+namespace natasha;
+
+interface protectColdInterface
 {
-    public function ProtectCold();
+    public function protectCold();
 }
-?>
+

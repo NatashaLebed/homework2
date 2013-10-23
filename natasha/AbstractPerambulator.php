@@ -3,6 +3,7 @@
 /*Абстрактный класс Коляска с общим для всех весом, брендом, количеством колес. Все коляски умеют ехать и останавливаться. */
 /* Имеет абстрактный метод Текст_для_прайса , для разных колясок дописывается разный префикс*/
 
+namespace natasha;
 
 abstract class AbstractPerambulator
 {
@@ -10,24 +11,23 @@ abstract class AbstractPerambulator
     public $weight;
     public $numWheels;
 
-    abstract public function PriceTitle();
+    abstract public function priceTitle();
 
-    public function SetValue($brand, $weight, $numWheels)
+    public function setValue($brand, $weight, $numWheels)
     {
         $this->brand = $brand;
         $this->weight = $weight;
         $this->numWheels = $numWheels;
     }
 
-    public function Go()
+    public function go()
     {
         return 'Go!';
     }
 
-    public function Stop()
+    public function stop()
     {
         return 'Stop!';
     }
 
 }
-?>
