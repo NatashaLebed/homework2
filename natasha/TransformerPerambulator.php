@@ -5,6 +5,12 @@ require_once 'FoldInterface.php';
 require_once 'ProtectColdInterface.php';
 require_once 'ReversibleHandleInterface.php';
 
+
+/*Класс Трансформер_коляска наследует все методы абстрактного класса Коляска*/
+/*Реализует метод Текст_для_прайса*/
+
+/*Имеет дополнительную фичу Складывание, Защита_от_Холода, Перекидная_ручка (интерфейсы)*/
+
 class TransformerPerambulator extends AbstractPerambulator implements FoldInterface, ProtectColdInterface, ReversibleHandleInterface
 {
     public function __construct($brand, $weight, $numWheels)
@@ -14,23 +20,23 @@ class TransformerPerambulator extends AbstractPerambulator implements FoldInterf
 
     public function PriceTitle()
     {
-        echo ("Transformer - $this->brand, $this->weight, $this->numWheels");
+        return ("Transformer - $this->brand, $this->weight, $this->numWheels");
     }
 
     public function Fold()
     {
         $operations = 5;
-        echo "Тип сложения - книжка. Сложилась за $operations действий ";
+        return "Тип сложения - книжка. Сложилась за $operations действий ";
     }
 
     public function ProtectCold()
     {
-        echo 'Чехол - есть, Плотная ткань - есть';
+        return 'Чехол - есть, Плотная ткань - есть';
     }
 
     public function ReversibleHandle()
     {
-        echo 'Можно перкинуть ручку';
+        return 'Можно перкинуть ручку';
     }
 
 
