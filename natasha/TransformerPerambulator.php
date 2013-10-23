@@ -2,21 +2,12 @@
 
 namespace natasha;
 
-/*require_once 'AbstractPerambulator.php';
-require_once 'FoldInterface.php';
-require_once 'ProtectColdInterface.php';
-require_once 'ReversibleHandleInterface.php';
-*/
-
 /*Класс Трансформер_коляска наследует все методы абстрактного класса Коляска*/
 /*Реализует метод Текст_для_прайса*/
 
 /*Имеет дополнительную фичу Складывание, Защита_от_Холода, Перекидная_ручка (интерфейсы)*/
 
-class TransformerPerambulator extends AbstractPerambulator implements
-    \FoldInterface,
-    \ProtectColdInterface,
-    \ReversibleHandleInterface
+class TransformerPerambulator extends AbstractPerambulator implements FoldInterface, ProtectColdInterface, ReversibleHandleInterface
 {
     public function __construct($brand, $weight, $numWheels)
     {

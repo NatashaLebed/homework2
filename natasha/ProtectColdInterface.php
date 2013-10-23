@@ -2,7 +2,7 @@
 
 namespace natasha;
 
-interface protectColdInterface
+interface ProtectColdInterface
 {
     public function protectCold();
 }

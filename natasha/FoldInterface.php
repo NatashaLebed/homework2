@@ -2,7 +2,7 @@
 
 namespace natasha;
 
-interface foldInterface
+interface FoldInterface
 {
     public function fold();
 }
