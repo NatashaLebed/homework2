@@ -1,47 +1,44 @@
 <?php
-abstract class AbstractClass
+abstract class AbstractPerambulator
 {
-    /* Данный метод должен быть определён в дочернем классе */
-    abstract protected function getValue();
-    abstract protected function prefixValue($prefix);
+    public $brand;
+    public $weight;
+    public $numWheels;
 
-    /* Общий метод */
-    public function printOut() {
-        print $this->getValue() . "\n";
+
+    public function Create($brand, $weight, $numWheels)
+    {
+        $this->brand = $brand;
+        $this->weight = $weight;
+        $this->numWheels = $numWheels;
+
+    }
+
+    abstract public function PriceTitle();
+
+    public function Go()
+    {
+       return 'Go!';
+    }
+
+    public function Stop()
+    {
+        return 'Stop!';
     }
 }
 
-class ConcreteClass1 extends AbstractClass
+class SummerPerambulator extends AbstractPerambulator
 {
-    protected function getValue() {
-        return "ConcreteClass1";
+    public function __construct($brand, $weight, $numWheels)
+    {
+        $this->Create($brand, $weight, $numWheels);
     }
-
-    public function prefixValue($prefix) {
-        return "{$prefix}ConcreteClass1";
+    function PriceTitle()
+    {
+        return ("SummerPeramb - $this->brand, $this->weight, $this->numWheels");
     }
 }
 
-class ConcreteClass2 extends AbstractClass
-{
-    public function getValue() {
-        return "ConcreteClass2";
-    }
-
-    public function prefixValue($prefix) {
-        return "{$prefix}ConcreteClass2";
-    }
-}
-
-$class1 = new ConcreteClass1;
-$class1->printOut();
-echo $class1->prefixValue('FOO_') ."<br>";
-
-$class2 = new ConcreteClass2;
-$class2->printOut();
-echo $class2->prefixValue('FOO_') ."\n";
-
-if ( $class1 instanceof ConcreteClass1 ) {
-    print "\$class1 is type ConcreteClass1\n";
-} else {echo "no";}
+$My = new SummerPerambulator('Chikko','10','3');
+$My->PriceTitle();
 ?>
