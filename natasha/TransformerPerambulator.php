@@ -11,34 +11,36 @@ require_once 'ReversibleHandleInterface.php';
 
 /*Имеет дополнительную фичу Складывание, Защита_от_Холода, Перекидная_ручка (интерфейсы)*/
 
-class TransformerPerambulator extends AbstractPerambulator implements FoldInterface, ProtectColdInterface, ReversibleHandleInterface
+class TransformerPerambulator extends AbstractPerambulator implements
+    \FoldInterface,
+    \ProtectColdInterface,
+    \ReversibleHandleInterface
 {
     public function __construct($brand, $weight, $numWheels)
     {
         $this->SetValue($brand, $weight, $numWheels);
     }
 
-    public function PriceTitle()
+    public function priceTitle()
     {
         return ("Transformer - $this->brand, $this->weight, $this->numWheels");
     }
 
-    public function Fold()
+    public function fold()
     {
-        $operations = 5;
+        public $operations = 5;
         return "Тип сложения - книжка. Сложилась за $operations действий ";
     }
 
-    public function ProtectCold()
+    public function protectCold()
     {
         return 'Чехол - есть, Плотная ткань - есть';
     }
 
-    public function ReversibleHandle()
+    public function reversibleHandle()
     {
-        return 'Можно перкинуть ручку';
+        return 'Можно перекинуть ручку';
     }
 
 
 }
-?>

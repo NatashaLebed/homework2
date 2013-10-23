@@ -10,24 +10,23 @@ abstract class AbstractPerambulator
     public $weight;
     public $numWheels;
 
-    abstract public function PriceTitle();
+    abstract public function priceTitle();
 
-    public function SetValue($brand, $weight, $numWheels)
+    public function setValue($brand, $weight, $numWheels)
     {
         $this->brand = $brand;
         $this->weight = $weight;
         $this->numWheels = $numWheels;
     }
 
-    public function Go()
+    public function go()
     {
         return 'Go!';
     }
 
-    public function Stop()
+    public function stop()
     {
         return 'Stop!';
     }
 
 }
-?>

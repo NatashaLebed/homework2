@@ -12,4 +12,3 @@ echo $MyTransformer->PriceTitle().'<br>';
 echo 'Fold - '. $MyTransformer->Fold().'<br>';
 echo 'ProtectCold - '. $MyTransformer->ProtectCold().'<br>';
 echo 'ReversibleHandle - '. $MyTransformer->ReversibleHandle().'<br>';
-?>

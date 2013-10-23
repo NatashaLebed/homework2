@@ -13,20 +13,18 @@ class SummerPerambulator extends AbstractPerambulator implements FoldInterface
 {
     public function __construct($brand, $weight, $numWheels)
     {
-        $this->SetValue($brand, $weight, $numWheels);
+        $this->setValue($brand, $weight, $numWheels);
     }
 
-    public function PriceTitle()
+    public function priceTitle()
     {
         return ("SummerPeramb - $this->brand, $this->weight, $this->numWheels");
     }
 
-    public function Fold()
+    public function fold()
     {
         $operations = 3;
         return "Тип сложения - трость. Сложилась за $operations действия ";
     }
 
 }
-
-?>

@@ -1,7 +1,7 @@
 <?php
 
-interface ProtectColdInterface
+interface protectColdInterface
 {
-    public function ProtectCold();
+    public function protectCold();
 }
-?>
+

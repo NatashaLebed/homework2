@@ -1,8 +1,6 @@
 <?php
 
-interface FoldInterface
+interface foldInterface
 {
-    public  function Fold();
+    public function fold();
 }
-
-?>
