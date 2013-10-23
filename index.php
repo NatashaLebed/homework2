@@ -5,10 +5,11 @@ require_once 'natasha/TransformerPerambulator.php';
 
 $MySummer = new SummerPerambulator('Chikko','7','3');
 echo $MySummer->PriceTitle().'<br>';
-
-echo $MySummer->Fold().'<br>';
+echo 'Fold - '. $MySummer->Fold() .'<br><br>';
 
 $MyTransformer = new TransformerPerambulator('GoodBaby','15','4');
 echo $MyTransformer->PriceTitle().'<br>';
-echo $MyTransformer->Fold().'<br>';
+echo 'Fold - '. $MyTransformer->Fold().'<br>';
+echo 'ProtectCold - '. $MyTransformer->ProtectCold().'<br>';
+echo 'ReversibleHandle - '. $MyTransformer->ReversibleHandle().'<br>';
 ?>
