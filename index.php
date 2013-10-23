@@ -1,20 +1,33 @@
 <?php
+interface FoldInterface
+{
+    public function doFold();
+}
+
+interface ProtectColdInterface
+{
+    public function ProtectCold();
+}
+
+interface ReversibleHandleInterface
+{
+    public function ReversibleHandle();
+}
+
 abstract class AbstractPerambulator
 {
     public $brand;
     public $weight;
     public $numWheels;
 
+    abstract public function PriceTitle();
 
     public function Create($brand, $weight, $numWheels)
     {
         $this->brand = $brand;
         $this->weight = $weight;
         $this->numWheels = $numWheels;
-
     }
-
-    abstract public function PriceTitle();
 
     public function Go()
     {
@@ -33,12 +46,28 @@ class SummerPerambulator extends AbstractPerambulator
     {
         $this->Create($brand, $weight, $numWheels);
     }
-    function PriceTitle()
+    public function PriceTitle()
     {
-        return ("SummerPeramb - $this->brand, $this->weight, $this->numWheels");
+        echo ("SummerPeramb - $this->brand, $this->weight, $this->numWheels");
     }
+
 }
 
-$My = new SummerPerambulator('Chikko','10','3');
-$My->PriceTitle();
+class TransformerPerambulator extends AbstractPerambulator
+{
+    public function __construct($brand, $weight, $numWheels)
+    {
+        $this->Create($brand, $weight, $numWheels);
+    }
+    public function PriceTitle()
+    {
+        echo ("Transformer - $this->brand, $this->weight, $this->numWheels");
+    }
+
+}
+
+$MySummer = new SummerPerambulator('Chikko','7','3');
+$MySummer->PriceTitle();
+$MyTransformer = new TransformerPerambulator('GoodBaby','15','4');
+$MySummer->PriceTitle();
 ?>
