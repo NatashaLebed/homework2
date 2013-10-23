@@ -1,7 +1,6 @@
 <?php
 
-require_once 'AbstractPerambulator.php';
-require_once 'FoldInterface.php';
+namespace natasha;
 
 /*Класс Летняя_коляска наследует все методы абстрактного класса Коляска*/
 /*Реализует метод Текст_для_прайса*/

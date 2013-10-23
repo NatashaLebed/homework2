@@ -1,10 +1,12 @@
 <?php
 
-require_once 'AbstractPerambulator.php';
+namespace natasha;
+
+/*require_once 'AbstractPerambulator.php';
 require_once 'FoldInterface.php';
 require_once 'ProtectColdInterface.php';
 require_once 'ReversibleHandleInterface.php';
-
+*/
 
 /*Класс Трансформер_коляска наследует все методы абстрактного класса Коляска*/
 /*Реализует метод Текст_для_прайса*/
@@ -18,7 +20,7 @@ class TransformerPerambulator extends AbstractPerambulator implements
 {
     public function __construct($brand, $weight, $numWheels)
     {
-        $this->SetValue($brand, $weight, $numWheels);
+        $this->setValue($brand, $weight, $numWheels);
     }
 
     public function priceTitle()
@@ -28,7 +30,7 @@ class TransformerPerambulator extends AbstractPerambulator implements
 
     public function fold()
     {
-        public $operations = 5;
+        $operations = 5;
         return "Тип сложения - книжка. Сложилась за $operations действий ";
     }
 
@@ -39,7 +41,7 @@ class TransformerPerambulator extends AbstractPerambulator implements
 
     public function reversibleHandle()
     {
-        return 'Можно перекинуть ручку';
+        return 'Можно перкинуть ручку';
     }
 
 

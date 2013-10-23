@@ -1,14 +1,13 @@
 <?php
 
-require_once 'natasha/SummerPerambulator.php';
-require_once 'natasha/TransformerPerambulator.php';
+require_once 'autoload.php';
 
-$MySummer = new SummerPerambulator('Chikko','7','3');
-echo $MySummer->PriceTitle().'<br>';
-echo 'Fold - '. $MySummer->Fold() .'<br><br>';
+$mySummer = new \natasha\SummerPerambulator('Chikko','7','3');
+echo $mySummer->priceTitle().'<br>';
+echo 'Fold - '. $mySummer->fold() .'<br><br>';
 
-$MyTransformer = new TransformerPerambulator('GoodBaby','15','4');
-echo $MyTransformer->PriceTitle().'<br>';
-echo 'Fold - '. $MyTransformer->Fold().'<br>';
-echo 'ProtectCold - '. $MyTransformer->ProtectCold().'<br>';
-echo 'ReversibleHandle - '. $MyTransformer->ReversibleHandle().'<br>';
+$myTransformer = new \natasha\TransformerPerambulator('GoodBaby','15','4');
+echo $myTransformer->priceTitle().'<br>';
+echo 'Fold - '. $myTransformer->fold().'<br>';
+echo 'ProtectCold - '. $myTransformer->protectCold().'<br>';
+echo 'ReversibleHandle - '. $myTransformer->reversibleHandle().'<br>';
